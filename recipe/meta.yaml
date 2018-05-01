@@ -14,22 +14,15 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/shinyBS/shinyBS_{{ version }}.tar.gz
   sha256: 51be29541e066d30c66e243393f20b0da705eba1b7ce7eeadea993bb2aa91166
 
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
-
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
-
 
 requirements:
   build:
